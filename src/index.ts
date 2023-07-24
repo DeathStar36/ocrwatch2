@@ -83,14 +83,14 @@ const createWindow = async (): Promise<void> => {
     // not a keylogger, promise!
     console.log(uIOhook)
     uIOhook.on('keydown',e=>{
-        if (e.keycode === UiohookKey.Tab && !tabDown) {
+        if (e.keycode === UiohookKey.Delete && !tabDown) {
             tabDown = true;
             mainWindow.webContents.send('tabKey', true);
         }
     })
     uIOhook.on('keyup',e=>{
         // not a keylogger, promise!
-        if (e.keycode === UiohookKey.Tab && tabDown) {
+        if (e.keycode === UiohookKey.Delete && tabDown) {
             tabDown = false;
             mainWindow.webContents.send('tabKey', false);
         }
