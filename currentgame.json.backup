@@ -1,0 +1,355 @@
+{
+  "times": {
+    "start": "2025-12-26T01:55:48.651Z",
+    "end": "2025-12-26T01:55:48.651Z"
+  },
+  "status": "in_progress",
+  "self": {
+    "name": "o &~",
+    "hero": "",
+    "heroes": [
+      ""
+    ],
+    "stats": [
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "]\n",
+        "unit": ""
+      },
+      {
+        "value": 0,
+        "title": "",
+        "text": "",
+        "unit": ""
+      }
+    ],
+    "player": {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 42,
+        "g": 42,
+        "b": 42,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "< for renderer proce",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    "role": "support"
+  },
+  "match": {
+    "info": "",
+    "mode": "",
+    "gamemode": "",
+    "map": "",
+    "competitive": false,
+    "time": {
+      "text": "0:00",
+      "duration": 0
+    },
+    "status": {
+      "type": "",
+      "text": "",
+      "lines": [],
+      "state": "",
+      "allies": {
+        "time": "",
+        "distance": ""
+      },
+      "enemies": {
+        "time": "",
+        "distance": ""
+      }
+    }
+  },
+  "performance": {},
+  "allies": [
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 42,
+        "g": 42,
+        "b": 42,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "< for renderer proce",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "T |",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 83,
+        "g": 83,
+        "b": 80,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "vie ¢",
+      "roleColor": {
+        "r": 0,
+        "g": 0,
+        "b": 1,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 49,
+        "g": 50,
+        "b": 46,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": true,
+      "name": "B",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    }
+  ],
+  "enemies": [
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 57,
+        "g": 56,
+        "b": 55,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "N e: adéRepresemtation)",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 97,
+        "g": 85,
+        "b": 93,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "% Video",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 249,
+        "g": 255,
+        "b": 231,
+        "a": 255
+      },
+      "role": "support",
+      "grouped": false,
+      "name": "- Vome ). oharne (3",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    }
+  ],
+  "sums": {
+    "allies": {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "role": "",
+      "grouped": false,
+      "name": "",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    },
+    "enemies": {
+      "primary": "",
+      "secondary": "",
+      "roleColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "role": "",
+      "grouped": false,
+      "name": "",
+      "eliminations": 0,
+      "assists": 0,
+      "deaths": 0,
+      "damage": 0,
+      "healing": 0,
+      "mitigated": 0,
+      "vacant": false
+    }
+  }
+}
