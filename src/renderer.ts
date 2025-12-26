@@ -33,6 +33,10 @@ ipcRenderer.on('appDataPath',(event,path)=>{
     loadSession();
 })
 
+ipcRenderer.on('hotkey',(event,hk)=>{
+    console.log('Current hotkey:', hk);
+})
+
 setTimeout(() => {
     ipcRenderer.send('initVideo');
 }, 1000);
