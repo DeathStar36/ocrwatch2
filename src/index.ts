@@ -52,15 +52,38 @@ const createWindow = async (): Promise<void> => {
     }
     mainWindow.webContents.send('appDataPath', appDataDir);
 
-    const configPath = path.join(__dirname, 'config.json');
-    console.log('Config path:', configPath);
+    // Try several locations for config so it works both in dev and packaged builds.
+    const candidates = [
+        path.join(process.cwd(), 'config.json'),
+        path.join(__dirname, 'config.json'),
+    ];
+
+    let configPath: string | null = null;
+    for (const p of candidates) {
+        try {
+            if (fs.existsSync(p)) {
+                configPath = p;
+                break;
+            }
+        } catch (e) {
+            // ignore
+        }
+    }
+
+    if (!configPath) {
+        console.warn('No config.json found in candidates, using defaults. Searched:', candidates);
+    } else {
+        console.log('Config path:', configPath);
+    }
 
     let config: any = {};
-    try {
-        config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-        console.log('Loaded config:', config);
-    } catch (e) {
-        console.error('Failed to load config:', e);
+    if (configPath) {
+        try {
+            config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+            console.log('Loaded config from', configPath, config);
+        } catch (e) {
+            console.error('Failed to load config:', e);
+        }
     }
 
     const hotkey = config.hotkey || 'Tab';
