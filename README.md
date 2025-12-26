@@ -8,8 +8,8 @@ While this app is running, it listens for key presses of the configured hotkey (
 It then applies OCR on that screen, including mode and map info, which hero you're playing and stats of you and other players in your game (kills, deaths, healing, etc.) and saves that data.
 
 ## Configuration
-Edit `config.json` to change settings:
-- `hotkey`: The key to listen for (e.g., "Tab", "Space", "F1"). Use the key name as defined in UiohookKey enum.
+Edit `config.json` in the main directory to change settings:
+- `hotkey`: The key to listen for (e.g., "Tab", "Space", "F1", "Delete"). Use the key name as defined in UiohookKey enum.
 
 
 

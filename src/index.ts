@@ -53,17 +53,30 @@ const createWindow = async (): Promise<void> => {
     mainWindow.webContents.send('appDataPath', appDataDir);
 
     const configPath = path.join(__dirname, 'config.json');
+    console.log('Config path:', configPath);
+
     let config: any = {};
     try {
         config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        console.log('Loaded config:', config);
     } catch (e) {
         console.error('Failed to load config:', e);
     }
 
     const hotkey = config.hotkey || 'Tab';
     const hotkeyCode = UiohookKey[hotkey as keyof typeof UiohookKey];
-    console.log('Loaded hotkey:', hotkey, 'code:', hotkeyCode);
-    mainWindow.webContents.send('hotkey', hotkey);
+    if (hotkeyCode === undefined) {
+        console.error(`Invalid hotkey "${hotkey}", using Tab`);
+        const fallbackHotkey = 'Tab';
+        const fallbackCode = UiohookKey[fallbackHotkey as keyof typeof UiohookKey];
+        console.log('Loaded hotkey:', fallbackHotkey, 'code:', fallbackCode);
+        mainWindow.webContents.send('hotkey', fallbackHotkey);
+        var finalHotkeyCode = fallbackCode;
+    } else {
+        console.log('Loaded hotkey:', hotkey, 'code:', hotkeyCode);
+        mainWindow.webContents.send('hotkey', hotkey);
+        var finalHotkeyCode = hotkeyCode;
+    }
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
@@ -96,14 +109,14 @@ const createWindow = async (): Promise<void> => {
     // not a keylogger, promise!
     console.log(uIOhook)
     uIOhook.on('keydown',e=>{
-        if (e.keycode === hotkeyCode && !hotkeyDown) {
+        if (e.keycode === finalHotkeyCode && !hotkeyDown) {
             hotkeyDown = true;
             mainWindow.webContents.send('tabKey', true);
         }
     })
     uIOhook.on('keyup',e=>{
         // not a keylogger, promise!
-        if (e.keycode === hotkeyCode && hotkeyDown) {
+        if (e.keycode === finalHotkeyCode && hotkeyDown) {
             hotkeyDown = false;
             mainWindow.webContents.send('tabKey', false);
         }
