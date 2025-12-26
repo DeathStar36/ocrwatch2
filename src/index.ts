@@ -62,6 +62,8 @@ const createWindow = async (): Promise<void> => {
 
     const hotkey = config.hotkey || 'Tab';
     const hotkeyCode = UiohookKey[hotkey as keyof typeof UiohookKey];
+    console.log('Loaded hotkey:', hotkey, 'code:', hotkeyCode);
+    mainWindow.webContents.send('hotkey', hotkey);
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
