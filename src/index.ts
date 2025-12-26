@@ -52,6 +52,17 @@ const createWindow = async (): Promise<void> => {
     }
     mainWindow.webContents.send('appDataPath', appDataDir);
 
+    const configPath = path.join(__dirname, 'config.json');
+    let config: any = {};
+    try {
+        config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    } catch (e) {
+        console.error('Failed to load config:', e);
+    }
+
+    const hotkey = config.hotkey || 'Tab';
+    const hotkeyCode = UiohookKey[hotkey as keyof typeof UiohookKey];
+
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
 
@@ -78,20 +89,20 @@ const createWindow = async (): Promise<void> => {
         })
     })
 
-    let tabDown = false;
+    let hotkeyDown = false;
 
     // not a keylogger, promise!
     console.log(uIOhook)
     uIOhook.on('keydown',e=>{
-        if (e.keycode === UiohookKey.Tab && !tabDown) {
-            tabDown = true;
+        if (e.keycode === hotkeyCode && !hotkeyDown) {
+            hotkeyDown = true;
             mainWindow.webContents.send('tabKey', true);
         }
     })
     uIOhook.on('keyup',e=>{
         // not a keylogger, promise!
-        if (e.keycode === UiohookKey.Tab && tabDown) {
-            tabDown = false;
+        if (e.keycode === hotkeyCode && hotkeyDown) {
+            hotkeyDown = false;
             mainWindow.webContents.send('tabKey', false);
         }
     })
